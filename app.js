@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	var canvas = document.getElementById("canvas"),
 		context = canvas.getContext("2d"),
-		offset = $(canvas).offset();
+		offset = $(canvas).offset(),
+		mobileDevice = (window.ondevicemotion === null); // Would be undefined on other devices, not null
 	
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
