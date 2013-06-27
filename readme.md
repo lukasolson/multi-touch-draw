@@ -1,1 +1,1 @@
-Demo can be found at http://lukasolson.com/multitouch_draw. Visit on your iOS device.
+[Demo](http://lukasolson.com/multitouch-draw) (Visit on your iOS device.)
