@@ -1,1 +1,1 @@
-[Demo](http://lukasolson.com/multitouch-draw) (Visit on your iOS device.)
+[Demo](http://lukasolson.github.io/multitouch-draw) (Visit on your iOS device.)
