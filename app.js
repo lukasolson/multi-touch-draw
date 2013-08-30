@@ -8,13 +8,6 @@ $(document).ready(function() {
 	canvas.height = window.innerHeight;
 	
 	context.font = "bold 16px Arial";
-	context.fillStyle = "white";
-	if (mobileDevice) {
-		context.fillText("Draw using multiple fingers!", 5, 20);
-	} else {
-		context.fillText("Click and drag to draw. (Visit on an iOS device for multi-touch integration.)", 5, 20);
-	}
-	
 	context.lineCap = "round";
 	context.lineWidth = 20;
 	
