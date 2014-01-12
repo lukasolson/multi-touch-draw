@@ -9,12 +9,16 @@ $(document).ready(function() {
 	
 	context.font = "bold 16px Arial";
 	context.lineCap = "round";
-	context.lineWidth = 20;
+	var MAX_LINE_WIDTH = 20,
+		lineWidth = MAX_LINE_WIDTH;
 	
 	var lines = {};
 	
 	var drawLine = function(line, x, y) {
+		var distance = Math.sqrt(Math.pow(x - line.x, 2) + Math.pow(y - line.y, 2));
+		lineWidth = Math.max(lineWidth - 1, Math.min(lineWidth + 1, -1/5 * distance + MAX_LINE_WIDTH));
 		context.strokeStyle = line.color;
+		context.lineWidth = lineWidth;
 		context.beginPath();
 		context.moveTo(line.x, line.y);
 		context.lineTo(x, y);
