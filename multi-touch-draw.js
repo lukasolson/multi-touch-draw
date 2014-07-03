@@ -10,36 +10,36 @@ function MultiTouchDraw(canvas) {
 	this.ballpoints = {};
 	this.counter = 0;
 
-	canvas.onmousedown = (function (e) {
+	canvas.addEventListener("mousedown", (function (e) {
 		this.onDrawStart(e);
 		canvas.onmousemove = this.onDraw.bind(this);
-	}).bind(this);
+	}).bind(this));
 
-	canvas.onmouseup = (function (e) {
+	canvas.addEventListener("mouseup", (function (e) {
 		this.onDrawEnd(e);
 		canvas.onmousemove = null;
-	}).bind(this);
+	}).bind(this));
 
-	canvas.ontouchstart = (function (e) {
+	canvas.addEventListener("touchstart", (function (e) {
 		e.preventDefault();
 		for (var i = 0; i < e.changedTouches.length; i++) {
 			this.onDrawStart(e.changedTouches[i]);
 		}
-	}).bind(this);
+	}).bind(this));
 
-	canvas.ontouchmove = (function (e) {
+	canvas.addEventListener("touchmove", (function (e) {
 		e.preventDefault();
 		for (var i = 0; i < e.changedTouches.length; i++) {
 			this.onDraw(e.changedTouches[i]);
 		}
-	}).bind(this);
+	}).bind(this));
 
-	canvas.ontouchend = (function (e) {
+	canvas.addEventListener("touchend", (function (e) {
 		e.preventDefault();
 		for (var i = 0; i < e.changedTouches.length; i++) {
 			this.onDrawEnd(e.changedTouches[i]);
 		}
-	}).bind(this);
+	}).bind(this));
 }
 
 MultiTouchDraw.randomPastel = function () {
