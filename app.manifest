@@ -1,7 +1,8 @@
 CACHE MANIFEST
-# v1.0.2
+# v1.0.3
 
 CACHE:
 index.html
 app.css
 multi-touch-draw.js
+icon.png
