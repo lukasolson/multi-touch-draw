@@ -43,10 +43,8 @@ function MultiTouchDraw(canvas) {
 }
 
 MultiTouchDraw.randomPastel = function () {
-	var r = Math.floor(Math.random() * 4 + 1) * 64,
-		g = Math.floor(Math.random() * 4 + 1) * 64,
-		b = Math.floor(Math.random() * 4 + 1) * 64;
-	return "rgb(" + r + ", " + g + ", " + b + ")";
+	const h = Math.floor(Math.random() * 360);
+	return `hsl(${h}, 90%, 70%)`;
 };
 
 MultiTouchDraw.prototype = {
